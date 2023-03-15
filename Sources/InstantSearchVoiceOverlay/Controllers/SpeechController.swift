@@ -121,7 +121,7 @@ public typealias SpeechErrorHandler = (Error?) -> Void
             return
         }
         
-        speechTask = speechRecognizer.recognitionTask(with: speechRequest!) { (result, error) in
+        speechTask = speechRecognizer.recognitionTask(with: speechRequest) { (result, error) in
             if let r = result {
                 let transcription = r.bestTranscription
                 let isFinal = r.isFinal
